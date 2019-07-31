@@ -91,7 +91,8 @@ class Person {
 let outSide = new Celsius(0);
 console.log('c is =', outSide.celsius)
 console.log('celsius to fahrenheit is equal to', outSide.fahrenheitTemp());
-
+console.log('kelvin is = ', outSide.kelvinTemp);
+console.log(`is the temperature below frezzing? ${outSide.isBelowFreezing()}`);
  console.log('===================question 5============================')
  class Movie {
    constructor(name, year, genre, cast, description) {
@@ -111,8 +112,35 @@ console.log('celsius to fahrenheit is equal to', outSide.fahrenheitTemp());
  let movie2 = new Movie('Harlem Knights', '1986', 'comedy', 'Eddie and Richard', 'super funny!');
 movie1.blurb();
 movie2.blurb();
+console.log('=========================question 6======================')
 
-console.log('===================question 6============================')
+class Vector {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+  plus(x,y) {
+    return x + y
+  }
+  minus(x, y) {
+    return x - y
+  }
+static distance(a, b) {
+  const dx = a.x - b.x;
+    const dy = a.y - b.y;
+
+    return Math.hypot(dx, dy);
+  }
+
+  }
+let v1 = new Vector(1, 2)
+let v2 = new Vector(2, 3)
+let v3 = new Vector(3, 4)
+console.log(v1.plus(v2));
+console.log(v1.minus(v2));
+console.log('distance')
+console.log(Vector.distance(v1, v2));
+console.log('===================question 7============================')
 class Car {
   constructor(make, model) {
     this.make = make;
